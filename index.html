@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Contato</title>
+</head>
+<body>
+    <aside>
+        
+        <div class="container">
+            <img src="./assets/bulba.png">
+            <h1>Dê um oi ao <span id="poke-name">Bulba</span>!</h1>
+            <p>E aos outros Pokémons também.</p>
+            <div class="icons">
+                <button onclick="changeType('grass')">
+                    <ion-icon name="leaf"></ion-icon>
+                </button>
+                <button onclick="changeType('fire')">
+                    <ion-icon name="flame"></ion-icon>
+                </button>
+                <button onclick="changeType('water')">
+                    <ion-icon name="water"></ion-icon>
+                </button>
+            </div>
+        </div>
+        
+        <footer>
+            Ellen Cabral ©  2023
+        </footer>
+    </aside>
+
+    <main>
+        <form action="#">
+            <fieldset>
+                <legend>Entre em contato</legend>
+    
+                <div class="select">
+                    <label for="subject">Assunto: 
+                        <ion-icon class="arrow" name="caret-down-outline"></ion-icon>
+                    </label>
+                    <select id="subject" name="subject">
+                        <option value="suporte">Suporte</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="reclamacao">Reclamação</option>
+                    </select>
+                </div>
+    
+                <label for="name">Nome Completo:</label>
+                <input id="name" type="text" placeholder="Seu nome">
+    
+                <label for="email">E-mail:</label>
+                <input id="email" type="email" placeholder="email@seudomínio.com">
+    
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" cols="30" rows="10">Digite sua mensagem</textarea>
+    
+                <label class="checkbox" for="news">
+                    <input id="news" type="checkbox">
+                    <span class="checkmark"></span>
+                    Aceito receber novidades por e-mail
+                </label>
+    
+                <button type="button">Enviar</button>
+            
+            </fieldset>
+        </form>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+</html>

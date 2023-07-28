@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-color: #C1E5D7;
+    --bg-gradient: linear-gradient(180deg, rgba(24, 74, 74, 0.50) 41.67%, #184A4A 95.83%);
+    --icon-color: #83EEC5;
+    --input-text-color: #919191;
+    --label-text-color: #184A4A;
+    --accent-color: #AC0031;
+}
+
+.fire {
+    --bg-color: #FFEABD;
+    --bg-gradient: linear-gradient(180deg, rgba(139, 41, 0, 0.50) 41.67%, #8B2901 95.83%);
+    --icon-color: #FFD57B;
+    --label-text-color: #8B2900;
+    --accent-color: #E63900;
+}
+
+.water {
+    --bg-color: #DEF1F4;
+    --bg-gradient: linear-gradient(180deg, rgba(41, 115, 131, 0.50) 41.67%, #297383 95.83%);
+    --icon-color: #B4E6EE;
+    --label-text-color: #297383;
+    --accent-color: #CD7B29;
+}
+
+body {
+    background: var(--bg-color);
+    display: flex;
+    height: 100vh;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.05rem;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-gradient);
+    color: #fff;
+    width: 50%;
+    padding: 10rem 5rem 3rem 10rem;
+}
+
+aside img {
+    width: 50%;
+    margin-bottom: 2.6rem;
+}
+
+aside h1 {
+    font-size: 3.2rem;
+}
+
+aside h1 span {
+    color: var(--icon-color);
+}
+
+aside p {
+    margin-top: 1.1rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.6rem;
+}
+
+.icons button {
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.icons button:focus {
+    color: var(--icon-color);
+}
+
+.icons button:hover {
+    color: var(--icon-color);
+    cursor: pointer;
+}
+
+footer {
+    color: var(--icon-color);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 40rem;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset legend {
+    color: var(--accent-color);
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+label {
+    color: var(--label-text-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.select select {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+}
+
+.select .arrow {
+    position: absolute;
+    top: 70%;
+    right: 2%;
+    color: var(--accent-color);
+}
+
+input[type="text"],
+input[type="email"],
+textarea, 
+select {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+    border-radius: 0.5rem;
+    border: none;
+
+    color: var(--input-text-color);
+    font-size: 1.2rem;
+
+    padding: 1rem;
+}
+
+textarea:focus, input:focus, select:focus {
+    outline: none;
+}
+
+.checkbox {
+    margin-bottom: 1.6rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.checkbox input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+}
+
+.checkbox input:hover + .checkmark {
+    background-color: #f2f2f2;
+}
+
+/* Preenche o fundo da caixa */
+.checkbox input:checked + .checkmark {
+    background-color: var(--accent-color);
+}
+
+/* Cria o certinho já escondido */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+
+    left: 0.5rem;
+    top: 0.1rem;
+    width: 0.3rem;
+    height: 0.8rem;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+  /* Mostra o certinho */
+.checkbox input:checked + .checkmark:after {
+    display: block;
+}
+
+form button {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 1.4rem;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 0.5rem;
+}
