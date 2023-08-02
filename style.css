@@ -77,11 +77,12 @@ aside p {
 
 .icons button {
     font-size: 5rem;
-    color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .icons button:focus {
     color: var(--icon-color);
+    outline: none;
 }
 
 .icons button:hover {
